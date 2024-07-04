@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+.datetime {
+    color: white;
+    background: black;
+    font-family: "Segoe UI", sans-serif;
+    width: 90%;
+    /* Adjusted for better responsiveness */
+    max-width: 340px;
+    /* Limit max width */
+    padding: 15px 10px;
+    border: 3px solid palevioletred;
+    border-radius: 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+    transition: 0.5s;
+    transition-property: background, box-shadow;
+}
+
+.datetime:hover {
+    background: rgb(168, 13, 65);
+    box-shadow: 0 0 30px palevioletred;
+}
+
+.date {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span:not(:last-child) {
+    position: relative;
+    margin: 0 6px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.time span:last-child {
+    background: rgb(168, 13, 65);
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 0 5px;
+    border-radius: 3px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .datetime {
+        width: 95%;
+        padding: 10px 5px;
+    }
+
+    .date {
+        font-size: 18px;
+    }
+
+    .time {
+        font-size: 50px;
+    }
+
+    .time span:last-child {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .datetime {
+        width: 100%;
+        padding: 8px 4px;
+    }
+
+    .date {
+        font-size: 16px;
+    }
+
+    .time {
+        font-size: 40px;
+    }
+
+    .time span:last-child {
+        font-size: 20px;
+    }
+}
